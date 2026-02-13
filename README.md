@@ -14,34 +14,21 @@ Pokitwork 프로젝트의 공유 지식베이스. [Agent Skills (SKILL.md)](http
 
 ## 설치
 
-### Claude Code
+프로젝트 루트에서 사용 중인 에이전트의 스킬 디렉토리에 clone한다.
 
-`.claude/skills/` 에 설치된다. ([문서](https://code.claude.com/docs/en/skills))
+| 에이전트 | 스킬 디렉토리 | 문서 |
+|----------|---------------|------|
+| Claude Code | `.claude/skills/` | [문서](https://code.claude.com/docs/en/skills) |
+| Antigravity | `.antigravity/skills/` | [문서](https://antigravity.google/docs/skills) |
+| Cursor | `.cursor/skills/` | [문서](https://cursor.com/ko/docs/context/skills) |
+| OpenAI Codex | `.agents/skills/` | - |
 
 ```bash
-/skills install https://github.com/pokitwork/pokitwork-knowledge-skills
+git clone https://github.com/pokitwork/pokitwork-knowledge-skills <스킬 디렉토리>/pokitwork
 ```
 
-### Antigravity
-
-`.antigravity/skills/` 에 설치된다. ([문서](https://antigravity.google/docs/skills))
+갱신:
 
 ```bash
-/skills install https://github.com/pokitwork/pokitwork-knowledge-skills
-```
-
-### Cursor
-
-`.cursor/skills/` 에 설치된다. ([문서](https://cursor.com/ko/docs/context/skills))
-
-```bash
-/skills install https://github.com/pokitwork/pokitwork-knowledge-skills
-```
-
-### OpenAI Codex
-
-`.agents/skills/` 에 설치된다. ([문서](https://developers.openai.com/codex/skills))
-
-```bash
-$skill-installer install skills from https://github.com/pokitwork/pokitwork-knowledge-skills
+git -C <설치경로> pull
 ```

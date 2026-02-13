@@ -5,12 +5,16 @@ Pokitwork 프로젝트의 공유 지식베이스. [Agent Skills (SKILL.md)](http
 ## 구조
 
 ```
-skills/
+web/                             ← pokitwork web (SvelteKit)
   project-setup/SKILL.md         ← 프로젝트 초기 설정 (AGENTS.md 생성 + 에이전트별 설정)
   sveltekit-conventions/SKILL.md ← SvelteKit 서버 레이어 아키텍처
   design-system/SKILL.md         ← 디자인 시스템 규칙
   directory-structure/SKILL.md   ← 프로젝트 디렉토리 구조 + 라우트 맵
   server-api/SKILL.md            ← Query Service 및 REST API 카탈로그
+common/                          ← 모든 프로젝트 공통
+  skill-management/SKILL.md      ← 스킬 갱신, 에이전트 설정, gitignore, 기여 방법
+server/                          ← pokitwork-api (예정)
+app/                             ← pokitwork-app (예정)
 ```
 
 ## SKILL.md 형식
@@ -33,12 +37,7 @@ description: 스킬 설명. 에이전트가 이 스킬을 언제 사용할지 �
 
 ## 기여 규칙
 
-- 스킬 추가: `skills/{skill-name}/SKILL.md` 파일을 생성한다.
+- 스킬 추가: `{프로젝트}/{skill-name}/SKILL.md` 파일을 생성한다.
 - 스킬 수정: 해당 SKILL.md 파일을 직접 수정한다.
 - 스킬 내용은 Pokitwork 프로젝트에 적용되는 실제 규칙과 패턴을 담는다.
 - 코드 예시는 실제 프로젝트 코드와 일관성을 유지한다.
-
-## 코드 스타일
-
-- 최소한의 깔끔한 주석. 의도가 코드만으로 명확하지 않을 때만 작성.
-- 불필요한 주석, 당연한 내용의 주석은 작성하지 않는다.

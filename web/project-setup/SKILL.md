@@ -49,38 +49,8 @@ Svelte MCP 서버가 설정되어 있으면, 아래 도구를 사용할 수 있�
 3. **svelte-autofixer**: Svelte 코드 이슈 분석. 코드 작성 시 반드시 사용.
 4. **playground-link**: Svelte Playground 링크 생성. 프로젝트 파일에 직접 작성한 경우 호출 금지.
 
-## 스킬 설치 안내
-
-이 프로젝트의 상세 규칙은 `pokitwork-knowledge-skills` 리포에 Agent Skills로 관리된다.
-스킬이 설치되지 않았다면 아래 명령으로 설치:
-
-- Claude: `/plugin marketplace add pokitwork/pokitwork-knowledge-skills`
-- Gemini: `gemini skill install https://github.com/pokitwork/pokitwork-knowledge-skills --path skills/<skill-name>`
-- Codex: `$skill-installer`로 `https://github.com/pokitwork/pokitwork-knowledge-skills` 설치
 ```
 
-### 2. 에이전트별 설정 파일
+### 2. 에이전트 설정 및 스킬 설치
 
-사용 중인 에이전트에 따라 추가 설정 파일을 생성한다.
-
-#### Claude Code 사용자
-
-`.claude/CLAUDE.md` 파일을 아래 내용으로 생성/수정:
-
-```markdown
-@AGENTS.md
-```
-
-#### Gemini CLI 사용자
-
-`.gemini/settings.json`의 `context.fileName`에 `"AGENTS.md"` 추가.
-
-#### OpenAI Codex 사용자
-
-`AGENTS.md`가 프로젝트 루트에 있으면 자동으로 읽힌다. 추가 설정 불필요.
-
-### 3. 완료 확인
-
-- [ ] `AGENTS.md` 파일이 프로젝트 루트에 존재
-- [ ] 사용 중인 에이전트의 설정 파일이 올바르게 구성됨
-- [ ] pokitwork-knowledge-skills 스킬이 설치됨
+`common/skill-management` 스킬을 참고한다.
