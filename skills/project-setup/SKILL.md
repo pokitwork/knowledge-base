@@ -40,6 +40,15 @@ description: Pokitwork 프로젝트 지식베이스 초기 설정. AGENTS.md 생
 - `src/routes/[page]/` — 해당 페이지 전용 컴포넌트.
 - 마크업은 `+page.svelte`에서 바로 작성. 미리 추상화하지 않는다.
 
+## MCP 도구
+
+Svelte MCP 서버가 설정되어 있으면, 아래 도구를 사용할 수 있다.
+
+1. **list-sections**: Svelte/SvelteKit 문서 섹션 목록 조회. 관련 작업 시 가장 먼저 호출.
+2. **get-documentation**: 특정 섹션의 전체 문서. 관련 모든 섹션을 한 번에 가져올 것.
+3. **svelte-autofixer**: Svelte 코드 이슈 분석. 코드 작성 시 반드시 사용.
+4. **playground-link**: Svelte Playground 링크 생성. 프로젝트 파일에 직접 작성한 경우 호출 금지.
+
 ## 스킬 설치 안내
 
 이 프로젝트의 상세 규칙은 `pokitwork-knowledge-skills` 리포에 Agent Skills로 관리된다.
@@ -60,17 +69,6 @@ description: Pokitwork 프로젝트 지식베이스 초기 설정. AGENTS.md 생
 
 ```markdown
 @AGENTS.md
-
-## Claude 전용 설정
-
-Svelte MCP 서버를 사용할 수 있으며, Svelte 5 및 SvelteKit 공식 문서에 접근 가능하다.
-
-### MCP 도구
-
-1. **list-sections**: Svelte/SvelteKit 문서 섹션 목록 조회. 관련 작업 시 가장 먼저 호출.
-2. **get-documentation**: 특정 섹션의 전체 문서. 관련 모든 섹션을 한 번에 가져올 것.
-3. **svelte-autofixer**: Svelte 코드 이슈 분석. 코드 작성 시 반드시 사용.
-4. **playground-link**: Svelte Playground 링크 생성. 프로젝트 파일에 직접 작성한 경우 호출 금지.
 ```
 
 #### Gemini CLI 사용자
