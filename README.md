@@ -14,13 +14,13 @@
 ## 설치
 
 ```bash
-npx skills add pokitwork/pokitwork-knowledge-base
+npx skills add pokitwork/knowledge-base
 ```
 
 ## 갱신
 
 ```bash
-npx skills add pokitwork/pokitwork-knowledge-base
+npx skills add pokitwork/knowledge-base
 ```
 
 ## 기여
