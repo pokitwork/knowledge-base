@@ -5,10 +5,11 @@
 ## 구조
 
 ```
-organization/SKILL.md   ← 조직관리 (구성원, 부서, 직책)
-leave/SKILL.md          ← 연차/휴가관리 (유형, 정책, 신청, 휴직)
-approval/SKILL.md       ← 결재관리 (결재선, 요청, 단계, 알림)
+organization/SKILL.md   ← 조직관리 (구성원, 부서, 직책, 프로젝트)
+leave/SKILL.md          ← 연차/휴가관리 (유형, 정책, 부여형, 신청, 휴직, 사용촉진)
+approval/SKILL.md       ← 결재관리 (결재선, 요청, 단계, 수신참조, 알림)
 notice/SKILL.md         ← 공지/알림 (공지사항, 카테고리, Inbox)
+attendance/SKILL.md     ← 근태관리 (유연근무, 단축근로)
 ```
 
 ## 스킬 갱신

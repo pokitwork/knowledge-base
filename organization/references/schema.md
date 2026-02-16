@@ -39,8 +39,25 @@ erDiagram
         timestamp created_at
     }
 
+    projects {
+        uuid id PK
+        varchar name
+        uuid pm_id FK "PM (구성원)"
+        varchar status "진행중 | 완료 | 중단"
+        timestamp created_at
+    }
+
+    project_members {
+        uuid id PK
+        uuid project_id FK
+        uuid member_id FK
+    }
+
     user ||--o| members : "linked to"
     members }o--o| departments : "belongs to"
     members }o--o| positions : "has"
     departments |o--o| members : "leader"
+    projects }o--|| members : "PM"
+    project_members }o--|| projects : "belongs to"
+    project_members }o--|| members : "participates"
 ```

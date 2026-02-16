@@ -12,6 +12,11 @@ erDiagram
         varchar name
     }
 
+    projects {
+        uuid id PK
+        varchar name
+    }
+
     approval_requests {
         uuid id PK
         uuid requester_id FK
@@ -27,6 +32,7 @@ erDiagram
         varchar event_type "nullable"
         varchar course_name "nullable"
         varchar institution "nullable"
+        uuid project_id FK "nullable — PM 결재 연동"
         text memo "nullable"
         timestamp created_at
     }
@@ -44,12 +50,12 @@ erDiagram
     approval_cc {
         uuid id PK
         uuid request_id FK
-        uuid member_id FK
+        uuid member_id FK "수신참조 대상자"
     }
 
     approval_chain_rules {
         uuid id PK
-        uuid department_id FK "UK - 부서당 1개"
+        uuid department_id FK "UK — 부서당 1개"
         timestamp created_at
     }
 
@@ -60,7 +66,16 @@ erDiagram
         int step_order
     }
 
+    attachments {
+        uuid id PK
+        varchar name
+        varchar record_type "approval_request 등"
+        uuid record_id
+        uuid blob_id FK
+    }
+
     approval_requests }o--|| members : "requested by"
+    approval_requests }o--o| projects : "related to"
     approval_steps }o--|| approval_requests : "belongs to"
     approval_steps }o--|| members : "approver"
     approval_cc }o--|| approval_requests : "cc of"
